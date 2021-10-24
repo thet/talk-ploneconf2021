@@ -459,6 +459,48 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+## Adding a source overlay
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html
+      <a
+          class="button-source pat-modal"
+          href="#modal-source">Source</a>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html[|1,3,6]
+<template id="modal-source">
+  <h1>Edit Source</h1>
+  <form class="source-panel">
+    <label>
+      Source:
+      <textarea name="tiptap-source"></textarea>
+    </label>
+    <button class="close-panel" type="button" name="tiptap-confirm">submit</button>
+    <button class="close-panel" type="button">cancel</button>
+  </form>
+</template>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html[9]
+<textarea
+    name="text"
+    class="pat-tiptap"
+    data-pat-tiptap="
+        toolbar-external: #tiptap-external-toolbar;
+        link-panel: #pat-modal .link-panel;
+        context-menu-link: #context-menu-link;
+        image-panel: #pat-modal .image-panel;
+        source-panel: #pat-modal .source-panel;
+    ">
+```
+
 
 <!-- .slide: data-background="Cyan" class="full" -->
 <iframe src="./tutorial/tiptap.html"></iframe>
