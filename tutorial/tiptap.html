@@ -66,10 +66,20 @@
   <body>
     <h2>pat-tiptap Tutorial</h2>
 
+    <div id="tiptap-external-toolbar">
+      <button type="button" class="button-heading-level-1">H1</button>
+      <button type="button" class="button-heading-level-2">H2</button>
+      <button type="button" class="button-paragraph">Paragraph</button>
+      <button type="button" class="button-bold">Bold</button>
+      <button type="button" class="button-italic">Italic</button>
+    </div>
+
     <textarea
         name="text"
         class="pat-tiptap"
-        >
+        data-pat-tiptap="
+            toolbar-external: #tiptap-external-toolbar;
+        ">
 <h1>hello.</h1>
 <p>Welcome to the pat-tiptap tutorial.</p>
     </textarea>
