@@ -82,6 +82,10 @@
           class="button-image pat-modal"
           href="#modal-image">Image</a>
 
+      <a
+          class="button-source pat-modal"
+          href="#modal-source">Source</a>
+
     </div>
 
     <textarea
@@ -92,6 +96,7 @@
             link-panel: #pat-modal .link-panel;
             context-menu-link: #context-menu-link;
             image-panel: #pat-modal .image-panel;
+            source-panel: #pat-modal .source-panel;
         ">
 <h1>hello.</h1>
 <p>Welcome to the pat-tiptap tutorial.</p>
@@ -216,6 +221,18 @@
               data-pat-forward="selector: button[name=tiptap-confirm]"
               />
         </label>
+      </form>
+    </template>
+
+    <template id="modal-source">
+      <h1>Edit Source</h1>
+      <form class="source-panel">
+        <label>
+          Source:
+          <textarea name="tiptap-source"></textarea>
+        </label>
+        <button class="close-panel" type="button" name="tiptap-confirm">submit</button>
+        <button class="close-panel" type="button">cancel</button>
       </form>
     </template>
 
