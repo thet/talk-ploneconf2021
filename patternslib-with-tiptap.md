@@ -47,8 +47,8 @@
 ## Part 1: For Designers
 
 - What is the Patternslib? <!-- .element: class="fragment" -->
-- Patternslib Showcase <!-- .element: class="fragment" -->
 - How to use the Patternslib <!-- .element: class="fragment" -->
+- Patternslib Showcase <!-- .element: class="fragment" -->
 - What is the tiptap editor? <!-- .element: class="fragment" -->
 
 
@@ -57,7 +57,7 @@
 
 - This is pat-tiptap <!-- .element: class="fragment" -->
 - <span>How to get this into Plone?<br><small>Webpack module federation</small></span> <!-- .element: class="fragment" -->
-- This is collective.tiptap <!-- .element: class="fragment" -->
+- collective.tiptap <!-- .element: class="fragment" -->
 
 
 
@@ -73,8 +73,55 @@
 https://patternslib.com/documentation/what-is-patternslib <!-- .element: class="caption" -->
 
 
-<!-- .slide: data-background="Cyan" class="full" -->
+<!-- .slide: data-background="Cyan" -->
+## Download
+https://patternslib.com/download
 
+
+<!-- .slide: data-background="Cyan" -->
+## Integrate
+```html
+<script
+    src="./patternslib/bundle.min.js">
+</script>
+```
+
+
+<!-- .slide: data-background="Cyan" -->
+## Use
+```html
+<input
+    type="date"
+    class="pat-date-picker"
+    />
+```
+
+
+<!-- .slide: data-background="Cyan" class="full" -->
+## System Overview
+<img alt="Patternslib System Overview" style="width: 60%; height: auto" src="./resources/patternslib-system-overview.svg" />
+
+
+<!-- .slide: data-background="Cyan" -->
+## Benefits
+
+
+<!-- .slide: data-background="Cyan" -->
+- Designed for Non-JavaScript People
+- Use semantic HTML
+- Developer friendly
+- Easy way to initialize JavaScript and to pass Options
+
+
+<!-- .slide: data-background="Cyan" -->
+- Mockup uses the Patternslib.
+
+
+<!-- .slide: data-background="Cyan" -->
+## Patternslib showcase
+
+
+<!-- .slide: data-background="Cyan" class="full" -->
 <iframe src="https://patternslib.com/demos"></iframe>
 
 
@@ -88,7 +135,27 @@ https://patternslib.com/documentation/what-is-patternslib <!-- .element: class="
 <iframe src="https://oira.cornelis.amsterdam"></iframe>
 
 
+
+
+<!-- .slide: data-background="Yellow" class="full" -->
+## Webpack Module Federation
+<img alt="Webpack Module Federation" style="width: 60%; height: auto" src="./resources/module-federation.svg" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- .slide: data-background="Cyan" class="full" -->
+# What is the tiptap editor?
 
 - https://tiptap.dev/
 
@@ -108,12 +175,6 @@ https://patternslib.com/documentation/what-is-patternslib <!-- .element: class="
 <!-- .slide: data-background="Cyan" -->
 <!-- .slide: data-background="Cyan" -->
 
-
-<a
-    href="https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/minutes-of-2014-06-09"
-    class="pat-inject"
-    data-pat-inject="source: #document-form; target: self::element">
-  Open tiptap.dev</a>
 
 
 

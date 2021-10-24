@@ -42,10 +42,9 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.js"></script>
-    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/highlight.min.js"></script -->
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/highlight.min.js"></script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/markdown/markdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/notes/notes.min.js"></script>
-    <script src="./resources/dist-patternslib/bundle.min.js"></script>
 
     <script>
       // More info about config & dependencies:
@@ -63,6 +62,11 @@
         transition: "linear",
         backgroundTransition: "slide",
 
+        markdown: {
+          gfm: true,
+          sanitize: false,
+        },
+
         plugins: [
           //RevealHighlight,
           RevealMarkdown,
@@ -70,7 +74,8 @@
         ],
 
         dependencies: [
-          { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/highlight.min.js" }
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.9.2/plugin/highlight/highlight.js' },
+          //{ src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/highlight.min.js" }
         ]
 
       });
