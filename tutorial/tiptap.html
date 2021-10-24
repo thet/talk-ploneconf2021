@@ -72,6 +72,12 @@
       <button type="button" class="button-paragraph">Paragraph</button>
       <button type="button" class="button-bold">Bold</button>
       <button type="button" class="button-italic">Italic</button>
+
+      <a
+          href="#modal-link"
+          class="button-link pat-modal"
+      >Link</a>
+
     </div>
 
     <textarea
@@ -79,10 +85,37 @@
         class="pat-tiptap"
         data-pat-tiptap="
             toolbar-external: #tiptap-external-toolbar;
+            link-panel: #pat-modal .link-panel;
         ">
 <h1>hello.</h1>
 <p>Welcome to the pat-tiptap tutorial.</p>
     </textarea>
+
+    <template id="modal-link">
+      <h2>Add Link</h2>
+      <form
+          class="link-panel">
+        <label>Link URL:
+          <input
+              type="text"
+              name="tiptap-href" />
+        </label>
+        <label>Link Text:
+          <input
+              type="text"
+              name="tiptap-text" />
+        </label>
+        <button
+            class="close-panel"
+            type="button"
+            name="tiptap-confirm"
+          >submit</button>
+        <button
+            class="close-panel"
+            type="button"
+          >close</button>
+      </form>
+    </template>
 
   </body>
 </html>
