@@ -85,26 +85,25 @@ body {
 }
 
 .reveal a {
-  color: white;
   padding: 0 0.2em 0.1em 0.2em;
   border-bottom-width: 0.1em !important;
   border-bottom-style: solid !important;
   border-bottom-color: transparent;
 }
-.reveal a:hover {
+.reveal .has-dark-background,
+.reveal .has-dark-background a {
+  color: white;
+}
+.reveal .has-dark-background a:hover {
   color: white;
   border-bottom-color: white;
 }
 
-section:not([data-background]),
-section:not([data-background]) a,
-section[data-background="yellow"],
-section[data-background="yellow"] a {
+.reveal,
+.reveal a {
   color: black;
 }
-
-.reveal section:not([data-background]) a:hover,
-.reveal section[data-background="yellow"] a:hover {
+.reveal a:hover {
   color: black;
   border-bottom-color: black;
 }
