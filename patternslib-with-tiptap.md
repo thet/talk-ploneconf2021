@@ -137,8 +137,138 @@ https://patternslib.com/download
 
 
 
-<!-- .slide: data-background="Yellow" class="full" -->
+<!-- .slide: data-background="Blue" -->
+# The tiptap editor
+
+
+<!-- .slide: data-background="Blue" -->
+- A modern text editor
+- Headless
+- HTML, Markdown, whatever.
+- Based on Prosemirror
+- Awesome features (Collaboration, Mentions, Checkboxes, ...)
+
+
+<!-- .slide: data-background="Blue" -->
+- https://tiptap.dev/
+
+
+<!-- .slide: data-background="Blue" -->
+## Patternslib integration
+- https://github.com/Patternslib/pat-tiptap/pull/2
+
+
+<!-- .slide: data-background="Blue" -->
+http://localhost:3010/src/
+
+
+<!-- .slide: data-background="Blue" -->
+https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/minutes-of-2014-06-09
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html
+<textarea
+    name="text"
+    class="pat-tiptap">
+  <h1>hello</h1>
+  <p>I am some text content</p>
+</textarea>
+```
+
+
+<!-- .slide: data-background="Blue" -->
+## Add a toolbar
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html
+<div id="tiptap-external-toolbar">
+  <button type="button" class="button-bold">Bold</button>
+  <button type="button" class="button-italic">Italic</button>
+  <button type="button" class="button-strike">Strike</button>
+</div>
+```
+
+```html [4-5]
+<textarea
+    name="text"
+    class="pat-tiptap"
+    data-pat-tiptap="
+        toolbar-external: #tiptap-external-toolbar
+    ">
+</textarea>
+```
+
+
+<!-- .slide: data-background="Blue" -->
+## Add a link overlay
+
+
+<!-- .slide: data-background="Blue" -->
+```html[|3-6]
+<div id="tiptap-external-toolbar">
+  <!-- other buttons -->
+  <a
+      href="#modal-link"
+      class="button-link pat-modal"
+      >Link</a>
+</div>
+```
+
+
+<!-- .slide: data-background="Blue" -->
+```html [|2,5,9,14,17,19]
+<template
+    id="modal-link"
+    hidden>
+  <form
+      class="link-panel">
+    <label>Link URL:
+      <input
+          type="text"
+          name="tiptap-href" />
+    </label>
+    <label>Link Text:
+      <input
+          type="text"
+          name="tiptap-text" />
+    </label>
+    <button
+        class="close-panel"
+        type="button"
+        name="tiptap-confirm"
+      >submit</button>
+  </form>
+</template>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- .slide: data-background="Yellow" -->
 ## Webpack Module Federation
+
+
+<!-- .slide: data-background="Yellow" class="full" -->
 <img alt="Webpack Module Federation" style="width: 60%; height: auto" src="./resources/module-federation.svg" />
 
 
@@ -155,9 +285,7 @@ https://patternslib.com/download
 
 
 <!-- .slide: data-background="Cyan" class="full" -->
-# What is the tiptap editor?
 
-- https://tiptap.dev/
 
 
 <!-- .slide: data-background="Cyan" class="full" -->
