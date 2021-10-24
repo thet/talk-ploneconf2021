@@ -297,6 +297,106 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+## Add a image overlay
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html
+<a
+    class="button-image pat-modal"
+    href="#modal-image">Image</a>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html [|6-8,11-13]
+<template id="modal-image">
+  <h2>Add Image</h2>
+  <div>
+    <nav>
+      <a
+          href="#image-panel-external"
+          class="pat-inject"
+          data-pat-inject="target: .image-panel"
+      >External</a>
+      <a
+          href="#image-panel-selection"
+          class="pat-inject"
+          data-pat-inject="target: .image-panel"
+      >Selection</a>
+    </nav>
+
+    <div class="image-panel">
+    </div>
+
+    <button class="close-panel" type="button" name="tiptap-confirm">submit</button>
+    <button class="close-panel" type="button">cancel</button>
+  </div>
+</template>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html [|1,6,10,14]
+<template id="image-panel-external">
+  <h3>External Image</h3>
+  <form>
+    <label>
+      Image URL:
+      <input type="text" name="tiptap-src"/>
+    </label>
+    <label>
+      Title:
+      <input type="text" name="tiptap-title"/>
+    </label>
+    <label>
+      Alternative text:
+      <input type="text" name="tiptap-alt"/>
+    </label>
+  </form>
+</template>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html [|8,9,15,16]
+<template id="image-panel-selection">
+  <h3>Image Selection</h3>
+  <form>
+    <label>
+      <img src="PREVIEW-URL" />
+      <input
+          type="radio"
+          name="tiptap-src"
+          value="IMAGE-URL" />
+    </label>
+    <label>
+      <img src="PREVIEW-URL" />
+      <input
+          type="radio"
+          name="tiptap-src"
+          value="IMAGE-URL" />
+    </label>
+  </form>
+</template>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html [|8]
+<textarea
+    name="text"
+    class="pat-tiptap"
+    data-pat-tiptap="
+        toolbar-external: #tiptap-external-toolbar;
+        link-panel: #pat-modal .link-panel;
+        context-menu-link: #context-menu-link;
+        image-panel: #pat-modal .image-panel;
+    ">
+```
+
+
 
 
 <!-- .slide: data-background="Cyan" class="full" -->
