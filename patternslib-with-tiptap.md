@@ -397,6 +397,67 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+## Small improvements to the image overlay
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html [13]
+<template id="modal-image">
+  <h2>Add Image</h2>
+  <div>
+    <nav>
+      <a
+          href="#image-panel-external"
+          class="pat-inject"
+          data-pat-inject="target: .image-panel"
+      >External</a>
+      <a
+          href="#image-panel-selection"
+          class="pat-inject"
+          data-pat-inject="target: .image-panel; trigger: autoload"
+      >Selection</a>
+    </nav>
+
+    <div class="image-panel">
+    </div>
+
+    <button class="close-panel" type="button" name="tiptap-confirm">submit</button>
+    <button class="close-panel" type="button">cancel</button>
+  </div>
+</template>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html [|10,11,20,21]
+<template id="image-panel-selection">
+  <h3>Image Selection</h3>
+  <form>
+    <label>
+      <img src="PREVIEW-URL" />
+      <input
+          type="radio"
+          name="tiptap-src"
+          value="IMAGE-URL"
+          class="pat-forward"
+          data-pat-forward="selector: button[name=tiptap-confirm]"
+          />
+    </label>
+    <label>
+      <img src="PREVIEW-URL" />
+      <input
+          type="radio"
+          name="tiptap-src"
+          value="IMAGE-URL"
+          class="pat-forward"
+          data-pat-forward="selector: button[name=tiptap-confirm]"
+          />
+    </label>
+  </form>
+</template>
+```
+
 
 
 <!-- .slide: data-background="Cyan" class="full" -->
