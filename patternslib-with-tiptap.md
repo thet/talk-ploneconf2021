@@ -126,12 +126,10 @@ https://patternslib.com/download
 
 
 <!-- .slide: data-background="Cyan" class="full" -->
-
 <iframe src="https://quaive.cornelis.amsterdam"></iframe>
 
 
 <!-- .slide: data-background="Cyan" class="full" -->
-
 <iframe src="https://oira.cornelis.amsterdam"></iframe>
 
 
@@ -184,9 +182,11 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 <!-- .slide: data-background="Blue" class="full" -->
 ```html
 <div id="tiptap-external-toolbar">
+  <button type="button" class="button-heading-level-1">H1</button>
+  <button type="button" class="button-heading-level-2">H2</button>
+  <button type="button" class="button-paragraph">Paragraph</button>
   <button type="button" class="button-bold">Bold</button>
   <button type="button" class="button-italic">Italic</button>
-  <button type="button" class="button-strike">Strike</button>
 </div>
 ```
 
@@ -205,7 +205,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ## Add a link overlay
 
 
-<!-- .slide: data-background="Blue" -->
+<!-- .slide: data-background="Blue" class="full" -->
 ```html[|3-6]
 <div id="tiptap-external-toolbar">
   <!-- other buttons -->
@@ -217,7 +217,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" -->
+<!-- .slide: data-background="Blue" class="full" -->
 ```html [|2,5,9,14,17,19]
 <template
     id="modal-link"
@@ -244,7 +244,22 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+<!-- .slide: data-background="Blue" class="full" -->
+```html[|6]
+<textarea
+    name="text"
+    class="pat-tiptap"
+    data-pat-tiptap="
+        toolbar-external: #tiptap-external-toolbar;
+        link-panel: #pat-modal .link-panel;
+    ">
+```
 
+
+
+
+<!-- .slide: data-background="Cyan" class="full" -->
+<iframe src="./tutorial/tiptap.html"></iframe>
 
 
 
