@@ -86,6 +86,7 @@
         data-pat-tiptap="
             toolbar-external: #tiptap-external-toolbar;
             link-panel: #pat-modal .link-panel;
+            context-menu-link: #context-menu-link;
         ">
 <h1>hello.</h1>
 <p>Welcome to the pat-tiptap tutorial.</p>
@@ -116,6 +117,25 @@
           >close</button>
       </form>
     </template>
+
+    <template id="context-menu-link">
+      <nav class="tiptap-link-context-menu">
+        <a
+          class="close-panel tiptap-open-new-link"
+          target="_blank"
+          href=""
+        >Visit</a>
+        <button
+          type="button"
+          class="close-panel tiptap-edit-link"
+        >Edit link</button>
+        <button
+          type="button"
+          class="close-panel tiptap-unlink"
+        >Unlink</button>
+      </nav>
+    </template>
+
 
   </body>
 </html>
