@@ -256,6 +256,47 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+## Add a link context menu
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html [|2,4,6,12,16]
+<template
+    id="context-menu-link">
+  <nav
+      class="tiptap-link-context-menu">
+    <a
+      class="close-panel tiptap-open-new-link"
+      target="_blank"
+      href=""
+    >Visit</a>
+    <button
+      type="button"
+      class="close-panel tiptap-edit-link"
+    >Edit link</button>
+    <button
+      type="button"
+      class="close-panel tiptap-unlink"
+    >Unlink</button>
+  </nav>
+</template>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html[|7]
+<textarea
+    name="text"
+    class="pat-tiptap"
+    data-pat-tiptap="
+        toolbar-external: #tiptap-external-toolbar;
+        link-panel: #pat-modal .link-panel;
+        context-menu-link: #context-menu-link;
+    ">
+```
+
+
 
 
 <!-- .slide: data-background="Cyan" class="full" -->
