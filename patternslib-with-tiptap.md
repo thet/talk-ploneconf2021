@@ -93,6 +93,10 @@ https://patternslib.com/download
 
 
 <!-- .slide: data-background="Cyan" class="full" -->
+<iframe src="https://patternslib.com/demos/date-picker"></iframe>
+
+
+<!-- .slide: data-background="Cyan" class="full" -->
 ## System Overview
 <img alt="Patternslib System Overview" style="width: 60%; height: auto" src="./resources/patternslib-system-overview.svg" />
 
