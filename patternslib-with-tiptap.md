@@ -154,11 +154,7 @@ https://patternslib.com/download
 
 
 <!-- .slide: data-background="Blue" -->
-http://localhost:3010/src/
-
-
-<!-- .slide: data-background="Blue" -->
-https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/minutes-of-2014-06-09
+<a href="https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/minutes-of-2014-06-09" target="_blank">Quaive Prototype Demo</a>
 
 
 
@@ -180,6 +176,10 @@ A Patternslib tutorial
   <p>I am some text content</p>
 </textarea>
 ```
+
+
+<!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-1.html" target="_blank">./tutorial/tiptap-1.html</a>
 
 
 
@@ -208,6 +208,10 @@ A Patternslib tutorial
     ">
 </textarea>
 ```
+
+
+<!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-2.html" target="_blank">./tutorial/tiptap-2.html</a>
 
 
 
@@ -267,6 +271,10 @@ A Patternslib tutorial
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-3.html" target="_blank">./tutorial/tiptap-3.html</a>
+
+
 
 
 <!-- .slide: data-background="Blue" -->
@@ -310,9 +318,12 @@ A Patternslib tutorial
 ```
 
 
-
-
 <!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-4.html" target="_blank">./tutorial/tiptap-4.html</a>
+
+
+
+
 ## Add a image overlay
 
 
@@ -412,6 +423,10 @@ A Patternslib tutorial
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-5.html" target="_blank">./tutorial/tiptap-5.html</a>
+
+
 
 
 <!-- .slide: data-background="Blue" -->
@@ -476,6 +491,10 @@ A Patternslib tutorial
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-6.html" target="_blank">./tutorial/tiptap-6.html</a>
+
+
 
 
 <!-- .slide: data-background="Blue" -->
@@ -519,6 +538,10 @@ A Patternslib tutorial
         source-panel: #pat-modal .source-panel;
     ">
 ```
+
+
+<!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-7.html" target="_blank">./tutorial/tiptap-7.html</a>
 
 
 
@@ -602,6 +625,10 @@ A Patternslib tutorial
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-8.html" target="_blank">./tutorial/tiptap-8.html</a>
+
+
 
 
 <!-- .slide: data-background="Blue" -->
@@ -626,10 +653,15 @@ A Patternslib tutorial
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+<a href="./tutorial/tiptap-9.html" target="_blank">./tutorial/tiptap-9.html</a>
 
 
-<!-- .slide: data-background="Cyan" class="full" -->
-<iframe src="./tutorial/tiptap.html" loading="lazy"></iframe>
+
+
+<!-- .slide: data-background="Blue" -->
+Final result:
+<a href="./tutorial/tiptap.html" target="_blank">./tutorial/tiptap.html</a>
 
 
 
