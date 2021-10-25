@@ -502,6 +502,85 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+<!-- .slide: data-background="Blue" -->
+## Add mentions and tags context menus
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html[10-13]
+<textarea
+  name="text"
+  class="pat-tiptap"
+  data-pat-tiptap="
+      toolbar-external: #tiptap-external-toolbar;
+      link-panel: #pat-modal .link-panel;
+      context-menu-link: #context-menu-link;
+      image-panel: #pat-modal .image-panel;
+      source-panel: #pat-modal .source-panel;
+      context-menu-mentions: #context-menu-mentions;
+      url-scheme-mentions: https://quaive.cornelis.amsterdam/users/{USER};
+      context-menu-tags: #context-menu-tags;
+      url-scheme-tags: https://quaive.cornelis.amsterdam/tags/{TAG};
+  ">
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html[|1,3,7-8,13-14,19-20]
+<template id="context-menu-mentions">
+  <form
+      class="pat-checklist pat-autosubmit tiptap-mentions-context-menu">
+    <label>
+      <input
+          type="checkbox"
+          name="mention"
+          value="hans"
+    />hans</label><br/>
+    <label>
+      <input
+          type="checkbox"
+          name="mention"
+          value="franz"
+    />franz</label><br/>
+    <label>
+      <input
+          type="checkbox"
+          name="mention"
+          value="sepp"
+    />sepp</label><br/>
+  </form>
+</template>
+```
+
+
+<!-- .slide: data-background="Blue" class="full" -->
+```html[|1,3,7-8,13-14,19-20]
+<template id="context-menu-tags">
+  <form
+      class="pat-checklist pat-autosubmit tiptap-tags-context-menu">
+    <label>
+      <input
+          type="checkbox"
+          name="tag"
+          value="I ♥ UTF-8"
+      />I ♥ UTF-8</label><br/>
+    <label>
+      <input
+          type="checkbox"
+          name="tag"
+          value="music"
+      />music</label><br/>
+    <label>
+      <input
+          type="checkbox"
+          name="tag"
+          value="books"
+      />books</label><br/>
+  </form>
+</template>
+```
+
+
 <!-- .slide: data-background="Cyan" class="full" -->
 <iframe src="./tutorial/tiptap.html"></iframe>
 
