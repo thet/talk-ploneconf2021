@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tiptap demo</title>
+    <script src="http://localhost:3001/dist/bundle.js" async></script>
+    <script src="http://localhost:3010/dist/bundle.js" async></script>
+
+    <style type="text/css">
+      .tiptap-container {
+        border: 1px solid black;
+        margin: 1em;
+        padding: 1em;
+      }
+      .ProseMirror:focus {
+        outline: none;
+      }
+      .active {
+        background-color: green;
+      }
+
+      table, td, th {
+        border: 1px solid black;
+      }
+
+      th {
+        background-color: grey;
+        font-weight: bold;
+      }
+
+      /*
+      .ProseMirror p.placeholder::before,
+      .ProseMirror p.placeholder-top::before,
+      .ProseMirror p.placeholder-bottom::before {
+        content: attr(data-placeholder);
+        float: left;
+        color: #ced4da;
+        pointer-events: none;
+        height: 0;
+      }*/
+
+      /* Placeholder (at the top) */
+      .ProseMirror p.is-editor-empty:first-child::before {
+        content: attr(data-placeholder);
+        float: left;
+        color: #ced4da;
+        pointer-events: none;
+        height: 0;
+      }
+
+      /* Placeholder (on every new line) */
+      /*.ProseMirror p.is-empty::before {
+        content: attr(data-placeholder);
+        float: left;
+        color: #ced4da;
+        pointer-events: none;
+        height: 0;
+      }*/
+
+      .tooltip-container a,
+      .tooltip-container a:visited {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>pat-tiptap Tutorial</h2>
+
+    <div id="tiptap-external-toolbar">
+      <button type="button" class="button-heading-level-1">H1</button>
+      <button type="button" class="button-heading-level-2">H2</button>
+      <button type="button" class="button-paragraph">Paragraph</button>
+      <button type="button" class="button-bold">Bold</button>
+      <button type="button" class="button-italic">Italic</button>
+
+      <a
+          href="#modal-link"
+          class="button-link pat-modal"
+      >Link</a>
+
+      <a
+          class="button-image pat-modal"
+          href="#modal-image">Image</a>
+
+    </div>
+
+    <textarea
+        name="text"
+        class="pat-tiptap"
+        data-pat-tiptap="
+            toolbar-external: #tiptap-external-toolbar;
+            link-panel: #pat-modal .link-panel;
+            context-menu-link: #context-menu-link;
+            image-panel: #pat-modal .image-panel;
+        ">
+<h1>hello.</h1>
+<p>Welcome to the pat-tiptap tutorial.</p>
+    </textarea>
+
+    <template id="modal-link">
+      <h2>Add Link</h2>
+      <form
+          class="link-panel">
+        <label>Link URL:
+          <input
+              type="text"
+              name="tiptap-href" />
+        </label>
+        <label>Link Text:
+          <input
+              type="text"
+              name="tiptap-text" />
+        </label>
+        <button
+            class="close-panel"
+            type="button"
+            name="tiptap-confirm"
+          >submit</button>
+        <button
+            class="close-panel"
+            type="button"
+          >close</button>
+      </form>
+    </template>
+
+    <template id="context-menu-link">
+      <nav class="tiptap-link-context-menu">
+        <a
+          class="close-panel tiptap-open-new-link"
+          target="_blank"
+          href=""
+        >Visit</a>
+        <button
+          type="button"
+          class="close-panel tiptap-edit-link"
+        >Edit link</button>
+        <button
+          type="button"
+          class="close-panel tiptap-unlink"
+        >Unlink</button>
+      </nav>
+    </template>
+
+    <template id="modal-image">
+      <h2>Add Image</h2>
+      <div>
+        <nav>
+          <a
+              href="#image-panel-external"
+              class="pat-inject"
+              data-pat-inject="target: .image-panel"
+          >External</a>
+          <a
+              href="#image-panel-selection"
+              class="pat-inject"
+              data-pat-inject="target: .image-panel"
+          >Selection</a>
+        </nav>
+
+        <div class="image-panel">
+        </div>
+
+        <button class="close-panel" type="button" name="tiptap-confirm">submit</button>
+        <button class="close-panel" type="button">cancel</button>
+      </div>
+    </template>
+
+    <template id="image-panel-external">
+      <h3>External Image</h3>
+      <form>
+        <label>
+          Image URL:
+          <input type="text" name="tiptap-src"/>
+        </label>
+        <label>
+          Title:
+          <input type="text" name="tiptap-title"/>
+        </label>
+        <label>
+          Alternative text:
+          <input type="text" name="tiptap-alt"/>
+        </label>
+      </form>
+    </template>
+
+    <template id="image-panel-selection">
+      <h3>Image Selection</h3>
+      <form>
+        <label>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Lake_Bondhus_Norway_2862.jpg/320px-Lake_Bondhus_Norway_2862.jpg" />
+          <input
+              type="radio"
+              name="tiptap-src"
+              value="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Lake_Bondhus_Norway_2862.jpg/1024px-Lake_Bondhus_Norway_2862.jpg"
+              />
+        </label>
+        <label>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/International_Space_Station_after_undocking_of_STS-132.jpg/320px-International_Space_Station_after_undocking_of_STS-132.jpg" />
+          <input
+              type="radio"
+              name="tiptap-src"
+              value="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/International_Space_Station_after_undocking_of_STS-132.jpg/1024px-International_Space_Station_after_undocking_of_STS-132.jpg"
+              />
+        </label>
+        <label>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/153_-_Glacier_Perito_Moreno_-_Grotte_glaciaire_-_Janvier_2010.jpg/320px-153_-_Glacier_Perito_Moreno_-_Grotte_glaciaire_-_Janvier_2010.jpg" />
+          <input
+              type="radio"
+              name="tiptap-src"
+              value="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/153_-_Glacier_Perito_Moreno_-_Grotte_glaciaire_-_Janvier_2010.jpg/1024px-153_-_Glacier_Perito_Moreno_-_Grotte_glaciaire_-_Janvier_2010.jpg"
+              />
+        </label>
+      </form>
+    </template>
+
+  </body>
+</html>
