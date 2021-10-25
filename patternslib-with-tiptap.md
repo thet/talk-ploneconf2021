@@ -107,10 +107,11 @@ https://patternslib.com/download
 
 
 <!-- .slide: data-background="Cyan" -->
-- Designed for Non-JavaScript People
-- Use semantic HTML
-- Developer friendly
-- Easy way to initialize JavaScript and to pass Options
+- Designed for Non-JavaScript People <!-- .element: class="fragment" -->
+- Use semantic HTML <!-- .element: class="fragment" -->
+- Developer friendly <!-- .element: class="fragment" -->
+- Easy way to initialize JavaScript and to pass Options <!-- .element: class="fragment" -->
+- Reinitializes JavaScript when needed <!-- .element: class="fragment" -->
 
 
 <!-- .slide: data-background="Cyan" -->
@@ -140,11 +141,11 @@ https://patternslib.com/download
 
 
 <!-- .slide: data-background="Blue" -->
-- A modern text editor
-- Headless
-- HTML, Markdown, whatever.
-- Based on Prosemirror
-- Awesome features (Collaboration, Mentions, Checkboxes, ...)
+- A modern text editor <!-- .element: class="fragment" -->
+- Headless <!-- .element: class="fragment" -->
+- HTML, Markdown, whatever. <!-- .element: class="fragment" -->
+- Based on Prosemirror <!-- .element: class="fragment" -->
+- Awesome features (Collaboration, Mentions, Checkboxes, ...) <!-- .element: class="fragment" -->
 
 
 <!-- .slide: data-background="Blue" -->
@@ -164,7 +165,15 @@ http://localhost:3010/src/
 https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/minutes-of-2014-06-09
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+
+
+<!-- .slide: data-background="Blue" -->
+# A Patternslib / tiptap tutorial
+
+
+
+
+<!-- .slide: data-background="Blue" -->
 ```html
 <textarea
     name="text"
@@ -175,11 +184,13 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 <!-- .slide: data-background="Blue" -->
 ## Add a toolbar
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html
 <div id="tiptap-external-toolbar">
   <button type="button" class="button-heading-level-1">H1</button>
@@ -201,11 +212,13 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 <!-- .slide: data-background="Blue" -->
 ## Add a link overlay
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html[|3-6]
 <div id="tiptap-external-toolbar">
   <!-- other buttons -->
@@ -217,7 +230,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html [|2,5,9,14,17,19]
 <template
     id="modal-link"
@@ -244,7 +257,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html[|6]
 <textarea
     name="text"
@@ -256,11 +269,13 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 <!-- .slide: data-background="Blue" -->
 ## Add a link context menu
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html [|2,4,6,12,16]
 <template
     id="context-menu-link">
@@ -284,7 +299,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html[|7]
 <textarea
     name="text"
@@ -297,11 +312,13 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 <!-- .slide: data-background="Blue" -->
 ## Add a image overlay
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html
 <a
     class="button-image pat-modal"
@@ -309,7 +326,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html [|6-8,11-13]
 <template id="modal-image">
   <h2>Add Image</h2>
@@ -337,7 +354,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html [|1,6,10,14]
 <template id="image-panel-external">
   <h3>External Image</h3>
@@ -359,7 +376,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html [|8,9,15,16]
 <template id="image-panel-selection">
   <h3>Image Selection</h3>
@@ -383,7 +400,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html [|8]
 <textarea
     name="text"
@@ -397,11 +414,13 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 <!-- .slide: data-background="Blue" -->
 ## Small improvements to the image overlay
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html [13]
 <template id="modal-image">
   <h2>Add Image</h2>
@@ -429,7 +448,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html [|10,11,20,21]
 <template id="image-panel-selection">
   <h3>Image Selection</h3>
@@ -459,11 +478,13 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 <!-- .slide: data-background="Blue" -->
 ## Adding a source overlay
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html
       <a
           class="button-source pat-modal"
@@ -471,7 +492,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html[|1,3,6]
 <template id="modal-source">
   <h1>Edit Source</h1>
@@ -487,7 +508,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html[9]
 <textarea
     name="text"
@@ -502,11 +523,13 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 <!-- .slide: data-background="Blue" -->
 ## Add mentions and tags context menus
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html[10-13]
 <textarea
   name="text"
@@ -525,7 +548,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html[|1,3,7-8,13-14,19-20]
 <template id="context-menu-mentions">
   <form
@@ -553,7 +576,7 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
-<!-- .slide: data-background="Blue" class="full" -->
+<!-- .slide: data-background="Blue" -->
 ```html[|1,3,7-8,13-14,19-20]
 <template id="context-menu-tags">
   <form
@@ -581,6 +604,8 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 ## Finally: autofocus and placeholder
 ```html [15,16]
 <textarea
@@ -602,23 +627,10 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+
+
 <!-- .slide: data-background="Cyan" class="full" -->
-<iframe src="./tutorial/tiptap.html"></iframe>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<iframe src="./tutorial/tiptap.html" loading="lazy"></iframe>
 
 
 
@@ -629,43 +641,6 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 
 <!-- .slide: data-background="Yellow" class="full" -->
 <img alt="Webpack Module Federation" style="width: 60%; height: auto" src="./resources/module-federation.svg" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- .slide: data-background="Cyan" class="full" -->
-
-
-
-<!-- .slide: data-background="Cyan" class="full" -->
-
-
-
-
-
-
-
-<!-- .slide: data-background="Cyan" -->
-<!-- .slide: data-background="Cyan" -->
-<!-- .slide: data-background="Cyan" -->
-<!-- .slide: data-background="Cyan" -->
-<!-- .slide: data-background="Cyan" -->
-<!-- .slide: data-background="Cyan" -->
-
-
-
-
-
 
 
 
