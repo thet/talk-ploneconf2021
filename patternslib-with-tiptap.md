@@ -748,6 +748,8 @@ import("./bundle-config");
 <!-- .slide: data-background="DarkViolet" -->
 See it in action: collective.tiptap
 
+https://github.com/thet/collective.tiptap
+
 
 
 
