@@ -36,16 +36,14 @@
 
 <!-- .slide: data-background="yellow" -->
 
-- For Designers <!-- .element: class="fragment" -->
-
+- For Designers
 - For Integrators <!-- .element: class="fragment" -->
-
 - For Developers <!-- .element: class="fragment" -->
 
 
 <!-- .slide: data-background="yellow" -->
 
-- About Patternslib <!-- .element: class="fragment" -->
+- About Patternslib
 - The tiptap editor <!-- .element: class="fragment" -->
 - pat-tiptap Patternslib pattern <!-- .element: class="fragment" -->
 - <span>How to get this into Plone?<br><small>Webpack module federation</small></span> <!-- .element: class="fragment" -->
@@ -104,7 +102,7 @@ https://patternslib.com/download
 
 
 <!-- .slide: data-background="Cyan" -->
-- Designed for Non-JavaScript People <!-- .element: class="fragment" -->
+- Designed for Non-JavaScript People
 - Semantic HTML <!-- .element: class="fragment" -->
 - Developer friendly <!-- .element: class="fragment" -->
 - Easy way to initialize JavaScript and to pass Options <!-- .element: class="fragment" -->
@@ -138,7 +136,7 @@ https://patternslib.com/download
 
 
 <!-- .slide: data-background="Blue" -->
-- A modern text editor <!-- .element: class="fragment" -->
+- A modern text editor
 - Headless, no default UI <!-- .element: class="fragment" -->
 - HTML, Markdown, whatever. <!-- .element: class="fragment" -->
 - Based on Prosemirror <!-- .element: class="fragment" -->
@@ -606,6 +604,7 @@ A Patternslib tutorial
 
 
 
+<!-- .slide: data-background="Blue" -->
 ## Finally: autofocus and placeholder
 ```html [15,16]
 <textarea
@@ -635,16 +634,103 @@ A Patternslib tutorial
 
 
 
-<!-- .slide: data-background="Yellow" -->
+<!-- .slide: data-background="DarkViolet" -->
+# Plone integration
+
+
+<!-- .slide: data-background="DarkViolet" -->
+## Goals
+- Addon without recompiling <!-- .element: class="fragment" -->
+- No or neglectible code duplication <!-- .element: class="fragment" -->
+- Small bundle size <!-- .element: class="fragment" -->
+- Performance <!-- .element: class="fragment" -->
+
+
+<!-- .slide: data-background="DarkViolet" -->
+Hard to achieve with Plone 5 / RequireJS
+
+
+<!-- .slide: data-background="DarkViolet" -->
 ## Webpack Module Federation
 
 
-<!-- .slide: data-background="Yellow" class="full" -->
+<!-- .slide: data-background="DarkViolet" -->
+- Seperate bundles
+- Dependencies between each other <!-- .element: class="fragment" -->
+- Define shared libraries <!-- .element: class="fragment" -->
+- Define exported and remote modules <!-- .element: class="fragment" -->
+- Fallback to own dependency <!-- .element: class="fragment" -->
+
+
+<!-- .slide: data-background="DarkViolet" class="full" -->
 <img alt="Webpack Module Federation" style="width: 60%; height: auto" src="./resources/module-federation.svg" />
+
+
+<!-- .slide: data-background="DarkViolet" -->
+Webpack config:
+```js [|8,14-26]
+const path = require("path");
+const patternslib_config = require("@patternslib/patternslib/webpack/webpack.config.js");
+const { ModuleFederationPlugin } = require("webpack").container;
+
+module.exports = async (env, argv) => {
+    let config = {
+        entry: {
+            bundle: path.resolve(__dirname, "index.js"),
+        },
+    };
+    config = patternslib_config(env, argv, config);
+    config.output.path = path.resolve(__dirname, "dist/");
+
+    config.plugins.push(
+        new ModuleFederationPlugin({
+            shared: {
+                "@patternslib/patternslib": {
+                    singleton: true,
+                },
+                "jquery": {
+                    requiredVersion: dependencies.jquery,
+                    singleton: true,
+                },
+            },
+        })
+    );
+    return config;
+};
+```
+
+
+<!-- .slide: data-background="DarkViolet" -->
+index.json:
+```js
+// Webpack entry point for module federation.
+__webpack_public_path__ = document.currentScript.src + "/../";
+import("./bundle-config");
+```
+
+
+<!-- .slide: data-background="DarkViolet" -->
+See it in action: collective.tiptap
+
+
+
+
+<!-- .slide: data-background="Lime" -->
+# Outlook
+
+
+<!-- .slide: data-background="Lime" -->
+- Patternslib Webpack 5
+- Mockup ES6 <!-- .element: class="fragment" -->
+- Test and improve <!-- .element: class="fragment" -->
 
 
 
 
 <!-- .slide: data-background="Black" -->
-# This is the end.
+
+
+
+
+<!-- .slide: data-background="Purple" data-background-image="./resources/imgs/thats_all_folks.svg" -->
 
