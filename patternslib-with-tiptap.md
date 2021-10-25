@@ -36,28 +36,19 @@
 
 <!-- .slide: data-background="yellow" -->
 
-- Part 1: For Designers <!-- .element: class="fragment" -->
+- For Designers <!-- .element: class="fragment" -->
 
-- Part 2: For Integrators <!-- .element: class="fragment" -->
+- For Integrators <!-- .element: class="fragment" -->
 
-- Part 3: For Developers <!-- .element: class="fragment" -->
-
-
-<!-- .slide: data-background="yellow" -->
-## Part 1: For Designers
-
-- What is the Patternslib? <!-- .element: class="fragment" -->
-- How to use the Patternslib <!-- .element: class="fragment" -->
-- Patternslib Showcase <!-- .element: class="fragment" -->
-- What is the tiptap editor? <!-- .element: class="fragment" -->
+- For Developers <!-- .element: class="fragment" -->
 
 
 <!-- .slide: data-background="yellow" -->
-## Part 2: For Integrators &<br>Part 3: For Developers
 
-- This is pat-tiptap <!-- .element: class="fragment" -->
+- About Patternslib <!-- .element: class="fragment" -->
+- The tiptap editor <!-- .element: class="fragment" -->
+- pat-tiptap Patternslib pattern <!-- .element: class="fragment" -->
 - <span>How to get this into Plone?<br><small>Webpack module federation</small></span> <!-- .element: class="fragment" -->
-- collective.tiptap <!-- .element: class="fragment" -->
 
 
 
@@ -71,6 +62,12 @@
 > Patternslib is a library of reusable patterns which let you create rich, dynamic and interactive prototypes or websites, without having to know or care about Javascript.
 
 https://patternslib.com/documentation/what-is-patternslib <!-- .element: class="caption" -->
+
+
+<!-- .slide: data-background="Cyan" -->
+- Library for user interaction patterns
+- Concept by Cornelis Kolbach
+- Since 2011, first concepts since 2005
 
 
 <!-- .slide: data-background="Cyan" -->
@@ -108,7 +105,7 @@ https://patternslib.com/download
 
 <!-- .slide: data-background="Cyan" -->
 - Designed for Non-JavaScript People <!-- .element: class="fragment" -->
-- Use semantic HTML <!-- .element: class="fragment" -->
+- Semantic HTML <!-- .element: class="fragment" -->
 - Developer friendly <!-- .element: class="fragment" -->
 - Easy way to initialize JavaScript and to pass Options <!-- .element: class="fragment" -->
 - Reinitializes JavaScript when needed <!-- .element: class="fragment" -->
@@ -142,9 +139,10 @@ https://patternslib.com/download
 
 <!-- .slide: data-background="Blue" -->
 - A modern text editor <!-- .element: class="fragment" -->
-- Headless <!-- .element: class="fragment" -->
+- Headless, no default UI <!-- .element: class="fragment" -->
 - HTML, Markdown, whatever. <!-- .element: class="fragment" -->
 - Based on Prosemirror <!-- .element: class="fragment" -->
+- Strict data model <!-- .element: class="fragment" -->
 - Awesome features (Collaboration, Mentions, Checkboxes, ...) <!-- .element: class="fragment" -->
 
 
@@ -168,7 +166,9 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 
 
 <!-- .slide: data-background="Blue" -->
-# A Patternslib / tiptap tutorial
+# Building a UI around tiptap
+
+A Patternslib tutorial
 
 
 
