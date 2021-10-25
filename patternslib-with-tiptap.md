@@ -581,6 +581,27 @@ https://quaive.cornelis.amsterdam/workspaces/asian-steering-committee/minutes/mi
 ```
 
 
+## Finally: autofocus and placeholder
+```html [15,16]
+<textarea
+    name="text"
+    class="pat-tiptap"
+    data-pat-tiptap="
+        toolbar-external: #tiptap-external-toolbar;
+        link-panel: #pat-modal .link-panel;
+        context-menu-link: #context-menu-link;
+        image-panel: #pat-modal .image-panel;
+        source-panel: #pat-modal .source-panel;
+        context-menu-mentions: #context-menu-mentions;
+        url-scheme-mentions: https://quaive.cornelis.amsterdam/users/{USER};
+        context-menu-tags: #context-menu-tags;
+        url-scheme-tags: https://quaive.cornelis.amsterdam/tags/{TAG};
+    "
+    autofocus
+    placeholder="Your poem goes here...">
+```
+
+
 <!-- .slide: data-background="Cyan" class="full" -->
 <iframe src="./tutorial/tiptap.html"></iframe>
 
