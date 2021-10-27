@@ -704,7 +704,7 @@ Hard to achieve with Plone 5 / RequireJS
 
 <!-- .slide: data-background="DarkViolet" -->
 Webpack config:
-```js [|8,14-26]
+```js [|3,8,14-26]
 const path = require("path");
 const patternslib_config = require("@patternslib/patternslib/webpack/webpack.config.js");
 const { ModuleFederationPlugin } = require("webpack").container;
